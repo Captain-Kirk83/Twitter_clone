@@ -2,6 +2,7 @@ import { Row, Col, Button, message } from 'antd';
 import { SignupForm } from './SignupForm';
 import { useMe } from './util/hooks';
 import { useState } from 'react';
+import { LogoutButton } from './LogoutButton';
 
 export const Profile = () => {
     const { me } = useMe();
@@ -15,7 +16,8 @@ export const Profile = () => {
             ) : (
                 <Col>
                     Logged in as: <strong>{me.username}</strong>
-                    {/*To add logout button here*/}
+                    <br />
+                    <LogoutButton />
                 </Col>
             )}
         </Row>
